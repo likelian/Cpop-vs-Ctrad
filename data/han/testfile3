@@ -1,0 +1,10 @@
+#Script to find number of melodic sevenths in Han region Chinese folksongs.
+#Requires navigation to 'han' folder in the china folder of essen kern collection (download required).
+
+sevenths=`mint -a *.krn | ridx -H | grep -v '[[r]' | grep '[Mm]7' | wc -l`
+total_ints=`mint -a *.krn | ridx -H | grep -v '[[r]' | wc -l`
+total_pieces=`ls *.krn | wc -l`
+
+echo han found $sevenths sevenths out of $total_ints intervals in $total_pieces songs
+
+
