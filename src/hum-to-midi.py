@@ -9,4 +9,7 @@ author: likelian
 
 s = converter.parse('/Users/likelian/Desktop/Musicology/Cpop-vs-Ctrad/data/han/han0001.krn')
 
-print(s)
+s.analyze('key')
+
+
+print(s.analyze('key'))
