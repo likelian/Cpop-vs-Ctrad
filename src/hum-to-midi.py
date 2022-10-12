@@ -4,6 +4,10 @@ from music21 import *
 
 """
 author: likelian
+
+possible way to extract tracks from midi file
+https://web.mit.edu/music21/doc/moduleReference/moduleHumdrumSpineParser.html
+
 """
 
 
