@@ -5,30 +5,25 @@ from count_interval import *
 
 
 
-dataset_path = "../data/CoCoPops"
+
+dataset_name = "CoCoPops"
+dataset_path = "../data/"
+output_path = "../results/"
+
 interval_list = []
 
-for root, dirs, files in os.walk(dataset_path):
+for root, dirs, files in os.walk(dataset_path + dataset_name):
     for file in files:
-        if ".krn" in file:
+        if ".krn" in file or ".mid" in file:
             print("file", file)
             path = root + "/" + file
             stream = converter.parse(path)
             collect_interval(stream, interval_list)
 
-
             #remove
             break
 
 
-#print(interval_list)
-
-interval_list_str = []
-for interval in interval_list:
-    interval_list_str.append(interval.name)
-
-print(interval_list_str)
-
-print(interval_list_str.count("P5"))
+list_to_plot(interval_list, output_path, dataset_name)
 
 
