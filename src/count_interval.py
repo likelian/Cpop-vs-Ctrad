@@ -37,16 +37,17 @@ def list_to_plot(interval_list, output_path, dataset_name):
     for interval in interval_list:
         interval_list_str.append(interval.name)
 
-    interval_label_list = ["m2", "M2", "m3", "M3", "P4", "A4/d5", "P5", "m6", "M6", "m7", "M7", "P8"]
+    interval_label_list = ["m2", "M2", "m3", "M3", "P4", "A4/d5", "P5", "m6", "M6", "m7", "M7", "P8", "m9", "M9"]
 
     interval_dict = {}
     for label in interval_label_list:
         if label == "A4/d5": 
-            interval_dict[label] = interval_list_str.count("A4") + interval_list_str.count("P5")
+            interval_dict[label] = interval_list_str.count("A4") + interval_list_str.count("d5")
         else:
             interval_dict[label] = interval_list_str.count(label)
 
-    #print(interval_dict)
+    print(dataset_name)
+    print(interval_dict)
 
     interval_df = pd.DataFrame(data=interval_dict, index=[0])
 
