@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 
-def collect_interval(stream, interval_list):
+def collect_interval_duration(stream, interval_list):
     """
     input: music21 stream object
     """
@@ -21,6 +21,8 @@ def collect_interval(stream, interval_list):
                     interval_obj = interval.Interval(prev_element, element)
                     #print(interval_obj)
                     interval_list.append(interval_obj)
+
+                quit()
 
                 prev_element = element
                 
