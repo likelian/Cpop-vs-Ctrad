@@ -17,7 +17,18 @@ for root, dirs, files in os.walk(dataset_path):
             collect_interval(stream, interval_list)
 
 
+            #remove
+            break
 
 
-print(interval_list)
+#print(interval_list)
+
+interval_list_str = []
+for interval in interval_list:
+    interval_list_str.append(interval.name)
+
+print(interval_list_str)
+
+print(interval_list_str.count("P5"))
+
 
