@@ -6,13 +6,14 @@ import pandas as pd
 
 
 
+
 def plot_interval_duration(dataset_name, dataset_path, output_path):
 
 
     interval_label_list = ["m2", "M2", "m3", "M3", "P4", "A4/d5", "P5", "m6", "M6", "m7", "M7", "P8", "m9", "M9"]
-    duration_list = np.arange(33) * 0.25
+    duration_list = (np.arange(20) + 1) * 0.25
     interval_duration_df = pd.DataFrame(index=list(duration_list), columns=interval_label_list)
-    interval_duration_df.fillna(0, inplace=True)
+    interval_duration_df.fillna(1, inplace=True)
 
     counter = 0
 
@@ -24,12 +25,11 @@ def plot_interval_duration(dataset_name, dataset_path, output_path):
                 stream = converter.parse(path)
                 collect_interval_duration(stream, interval_duration_df)
 
-                #remove
-                quit()
 
-    interval_duration_plot(interval_list, output_path, dataset_name)
 
-    interval_list = []
+
+
+    interval_duration_plot(interval_duration_df, output_path, dataset_name)
 
 
 
