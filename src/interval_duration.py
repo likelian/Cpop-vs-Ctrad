@@ -2,10 +2,14 @@ from music21 import *
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 
-def collect_interval_duration(stream, interval_list):
+
+
+
+def collect_interval_duration(stream, interval_duration_df):
     """
     input: music21 stream object
     """
@@ -18,16 +22,21 @@ def collect_interval_duration(stream, interval_list):
             if isinstance(element, note.Note):
                 #get interval
                 if prev_element is not None:
-                    interval_obj = interval.Interval(prev_element, element)
-                    #print(interval_obj)
-                    interval_list.append(interval_obj)
+                    interval_str = interval.Interval(prev_element, element).name
+                    duration = prev_element.duration.quarterLength
 
-                quit()
+                    print(interval_str)
+                    print(duration)
+
+                    if interval_str in interval_duration_df:
+                        try:
+                            interval_duration_df[interval_str][duration] += 1
+                        except:
+                            pass
 
                 prev_element = element
-                
 
-    return interval_list
+    return interval_duration_df
 
 
 
