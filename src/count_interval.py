@@ -5,8 +5,6 @@ import matplotlib.pyplot as plt
 
 
 
-
-
 def collect_interval(stream, interval_list):
     """
     input: music21 stream object
@@ -28,6 +26,8 @@ def collect_interval(stream, interval_list):
                 
 
     return interval_list
+
+
 
 
 

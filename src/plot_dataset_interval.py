@@ -26,8 +26,6 @@ def plot_dataset_interval(dataset_name, dataset_path, output_path):
 
 
 
-
-
 dataset_path = "../data/"
 output_path = "../results/interval_distribution/"
 
