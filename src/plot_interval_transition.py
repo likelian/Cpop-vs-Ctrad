@@ -27,11 +27,11 @@ def plot_interval_transition(dataset_name, dataset_path, output_path):
                 interval_transition_df = interval_transition(interval_list, interval_transition_df, gram=2)
 
                 counter += 1
-                if counter > 10: break
+                #if counter > 10: break
 
 
     print(interval_transition_df)
-    
+
 
     plot_interval_transition_df(interval_transition_df, output_path, dataset_name)
 
@@ -45,7 +45,7 @@ def plot_interval_transition(dataset_name, dataset_path, output_path):
 
 
 dataset_path = "../data/"
-output_path = "../results/interval_direction_distribution/"
+output_path = "../results/interval_transition/"
 
 
 
