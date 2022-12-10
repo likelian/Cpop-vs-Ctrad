@@ -8,17 +8,11 @@ from interval_direction import *
 
 
 
-
 def plot_dataset_interval(dataset_name, dataset_path, output_path):
-
-
 
     interval_direction_dict = create_interval_direction_dict(gram=4)
 
-
-
     counter = 0
-
 
     for root, dirs, files in os.walk(dataset_path + dataset_name):
         for file in files:
