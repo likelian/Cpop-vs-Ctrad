@@ -1,0 +1,60 @@
+-----------------------------------------------------------
+/interval_distribution
+
+ 
+/POP909.json
+/CoCoPops.json
+Power_divergenceResult(statistic=5270.24698409723, pvalue=0.0)
+
+ 
+/POP909.json
+/han.json
+Power_divergenceResult(statistic=12224.620927819202, pvalue=0.0)
+
+chisquare on the difference of [POP909, CoCoPops] and the difference of [POP909, han]
+Power_divergenceResult(statistic=21169.422082415185, pvalue=0.0)
+
+
+
+
+-----------------------------------------------------------
+/interval_direction_distribution
+
+ 
+/POP909.json
+/CoCoPops.json
+Power_divergenceResult(statistic=1493.712485704097, pvalue=1.127596915916867e-309)
+
+ 
+/POP909.json
+/han.json
+Power_divergenceResult(statistic=872.72899245863, pvalue=2.413782612561022e-176)
+
+
+chisquare on the difference of [POP909, CoCoPops] and the difference of [POP909, han]
+Power_divergenceResult(statistic=2805.128369928784, pvalue=0.0)
+
+
+
+
+-----------------------------------------------------------
+/interval_transition
+
+ 
+/POP909.csv
+/CoCoPops.csv
+Power_divergenceResult(statistic=48456.37762766049, pvalue=0.0)
+
+ 
+/POP909.csv
+/han.csv
+Power_divergenceResult(statistic=35134.8045834884, pvalue=0.0)
+
+
+chisquare on the difference of [POP909, CoCoPops] and the difference of [POP909, han]
+Power_divergenceResult(statistic=82756.04915942994, pvalue=0.0)
+
+
+
+
+
